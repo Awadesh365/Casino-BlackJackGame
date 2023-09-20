@@ -1,0 +1,51 @@
+/* Complete the CSS styling according to the provided design */
+
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+    background: url("images/table.png");
+    background-size: cover;
+    color: white;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+h1 {
+    color: goldenrod;
+}
+
+#message-el {
+    font-style: italic;
+}
+
+#start-btn {
+    color: #075f2f;
+    width: 250px;
+    font-weight: bold;
+    background-color: goldenrod;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border: none;
+    border-radius: 2px;
+}
+
+#new-btn {
+    color: #075f2f;
+    width: 250px;
+    font-weight: bold;
+    background-color: goldenrod;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border: none;
+    border-radius: 2px;
+    margin-top: 5px;
+}
+
+#brd {
+    border-style: inherit;
+}
+
+#endGame-btn {
+    margin: 20px;
+    padding: 50px;
+}
