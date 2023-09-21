@@ -5,17 +5,18 @@
     <link rel="stylesheet" href="index.css">
 </head>
 
+
 <body>
     <div id="brd">
         <h1>Blackjack</h1>
         <p id="message-el">Want to play a round?</p>
-        <p>Cards:</p>
+        <p id="card-el">Cards:</p>
         <p id="sum-el">Sum: </p>
         <div>
             <button id="start-btn" onclick="startGame()">START GAME</button>
         </div>
         <div>
-            <button id="new-btn">NEW CARD</button>
+            <button id="new-btn" onclick="newCard()">NEW CARD</button>
         </div>
         <div id="endGame-btn" onclick="endGame()">
             <button>Let's start Again</button>
