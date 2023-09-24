@@ -1,12 +1,12 @@
 # Blackjack-game
 
-Now this website is Live at:-
+Now this website is Live at:-https://loquacious-peony-85df7f.netlify.app/
 
 Welcome to the Blackjack Game project! This is a classic implementation of the popular casino card game, Blackjack, created using HTML, CSS, and JavaScript.
 
 ## Demo
 
-You can play the game live at:-
+You can play the game live at:-https://loquacious-peony-85df7f.netlify.app/
 
 ## Features
 
@@ -16,7 +16,7 @@ You can play the game live at:-
 
 ## How to Play
 
-1. Visit the game [here]().
+1. Visit the game [here](https://loquacious-peony-85df7f.netlify.app/).
 2. Click the "Start Game" button to begin.
 3. Follow the on-screen instructions to make your moves and try to beat the dealer!
 
