@@ -1,14 +1,8 @@
-let firstCard = 10,
-  secondCard = 4;
-
-let cards = [firstCard, secondCard];
-
-let sum = cards[0] + cards[1];
-
+let cards = [];
+let sum = 0;
 let hasBlackJack = false;
-let isAlive = true;
+let isAlive = false;
 let isStartTriggered = false;
-
 let message = "";
 
 let messageEl = document.querySelector("#message-el");
@@ -16,14 +10,31 @@ let sumEl = document.querySelector("#sum-el");
 let cardEl = document.querySelector("#card-el");
 
 function startGame() {
-  if (isStartTriggered == false) renderGame();
-  isStartTriggered = true;
+  if (!isStartTriggered) {
+    isAlive = true;
+    isStartTriggered = true;
+    initializeGame(); // Initialize the game.
+  }
+}
+
+function initializeGame() {
+  cards = [generateRandomCard(), generateRandomCard()]; // Generate two random cards.
+  sum = calculateSum(cards);
+  renderGame();
+}
+
+function generateRandomCard() {
+  return Math.floor(Math.random() * 11) + 1; // Generates a random card between 1 and 11.
+}
+
+function calculateSum(cardArray) {
+  return cardArray.reduce((acc, card) => acc + card, 0);
 }
 
 function renderGame() {
-  cardEl.textContent = "Cards: " + cards[0] + " " + cards[1];
-
+  cardEl.textContent = "Cards: " + cards.join(" "); // Display the cards as a string.
   sumEl.textContent = "Sum: " + sum;
+
   if (sum <= 20) {
     message = "Do you want to draw a new card?";
   } else if (sum === 21) {
@@ -33,23 +44,26 @@ function renderGame() {
     message = "You're out of the game!";
     isAlive = false;
   }
+
   messageEl.textContent = message;
 }
+
 function newCard() {
   if (isAlive && isStartTriggered) {
-    let newCard = 3;
+    const newCardValue = generateRandomCard();
+    cards.push(newCardValue);
+    sum = calculateSum(cards);
 
-    sum += newCard;
+    cardEl.textContent += " " + newCardValue;
     renderGame();
-    cards.push(newCard);
-    cardEl.textContent += " " + cards[2];
   }
 }
+
 function endGame() {
   messageEl.textContent = "Want to play a round?";
-  sumEl.textContent = "sum: ";
+  sumEl.textContent = "Sum: ";
   cardEl.textContent = "Cards: ";
   sum = 0;
   isStartTriggered = false;
-  isAlive = true;
+  isAlive = false;
 }
