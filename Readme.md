@@ -1,4 +1,4 @@
-# Blackjack-game
+# Blackjack-game Using JS
 
 Now this website is Live at:-https://loquacious-peony-85df7f.netlify.app/
 
